@@ -18,7 +18,7 @@ async function run() {
     if (!itemPrices[item.market_hash_name] || !itemPrices[item.market_hash_name].lowest_price || itemPrices[item.market_hash_name].lowest_price < 0.15) {
       console.log(`No price found for ${item.number_of_items}x ${item.market_hash_name}`);
     } else {
-      console.log(`Selling ${item.number_of_items}x ${item.market_hash_name} for ${(itemPrices[item.market_hash_name].lowest_price - 0.1).toFixed(2) || 0.00} each`);
+      console.log(`Selling ${item.number_of_items}x ${item.market_hash_name} for ${(itemPrices[item.market_hash_name].lowest_price - 0.1).toFixed(2)} each`);
       // Adds each item's item_id to tradeData with a price (0.1 below the current lowest listing)
       item.item_ids.forEach((id) => {
         tradeData.push({
